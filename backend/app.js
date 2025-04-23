@@ -11,7 +11,7 @@ require('./services/queue.service'); // Initialize queue
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3001', // Your frontend URL
+  origin: 'https://web-scrapper-x17a.vercel.app', // Your frontend URL
   credentials: true
 }));
 app.use(express.json());
