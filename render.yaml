@@ -2,13 +2,13 @@ services:
   - type: web
     name: node-backend
     env: node
-    buildCommand: cd node-backend && npm install
-    startCommand: cd node-backend && npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
     plan: free
 
   - type: web
     name: python-backend
     env: python
-    buildCommand: cd python-backend && pip install -r requirements.txt
-    startCommand: cd python-backend && python3 app.py
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 app.py
     plan: free
