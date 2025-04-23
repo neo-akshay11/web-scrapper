@@ -18,7 +18,7 @@ const AskPage = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/ask",
+        "https://your-backend-url.onrender.com/api/ask",  // Directly using the URL here
         { url, question },
         {
           headers: {

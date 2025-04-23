@@ -9,7 +9,7 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/admin/users", {
+      const response = await axios.get("https://web-scrapper-1-x6h2.onrender.com/api/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(response.data);
@@ -17,10 +17,10 @@ const AdminDashboard = () => {
       console.error("Error fetching users", error);
     }
   };
-
+  
   const fetchStats = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/admin/stats", {
+      const response = await axios.get("https://web-scrapper-1-x6h2.onrender.com/api/admin/stats", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStats(response.data);
@@ -28,7 +28,6 @@ const AdminDashboard = () => {
       console.error("Error fetching stats", error);
     }
   };
-
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif", maxWidth: "800px", margin: "0 auto" }}>
       <h1 style={{ textAlign: "center", color: "#1A1F2C", marginBottom: "30px", fontSize: "2rem" }}>Admin Dashboard</h1>

@@ -14,7 +14,7 @@ const AdminLoginPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/admin-login", {
+      const response = await axios.post("https://your-backend-url.onrender.com/api/auth/admin-login", {
         email,
         password,
       });

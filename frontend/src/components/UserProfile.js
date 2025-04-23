@@ -8,7 +8,7 @@ const UserProfile = () => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("userToken");
       try {
-        const response = await axios.get("http://localhost:3000/api/auth/me", {
+        const response = await axios.get("https://your-backend-url.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(response.data);
