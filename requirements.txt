@@ -1,0 +1,11 @@
+streamlit
+PyPDF2
+google.generativeai
+python-dotenv
+langchain
+faiss-cpu
+langchain_google_genai
+unstructured
+langchain-community
+Flask
+redis
