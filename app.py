@@ -6,7 +6,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import google.generativeai as genai
 from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import UnstructuredURLLoader
 from langchain.chains.question_answering import load_qa_chain
@@ -111,4 +111,4 @@ def process():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(host='0.0.0.0', port=5001, debug=True)
