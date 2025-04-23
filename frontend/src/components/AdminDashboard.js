@@ -9,7 +9,7 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("https://web-scrapper-1-x6h2.onrender.com/api/admin/users", {
+      const response = await axios.get("https://web-scrapper-imjj.onrender.com/api/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(response.data);
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
   
   const fetchStats = async () => {
     try {
-      const response = await axios.get("https://web-scrapper-1-x6h2.onrender.com/api/admin/stats", {
+      const response = await axios.get("https://web-scrapper-imjj.onrender.com/api/admin/stats", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setStats(response.data);

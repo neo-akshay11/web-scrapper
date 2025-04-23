@@ -18,7 +18,7 @@ const AskPage = () => {
 
     try {
       const res = await axios.post(
-        "https://your-backend-url.onrender.com/api/ask",  // Directly using the URL here
+        "https://web-scrapper-imjj.onrender.com/api/ask",  // Directly using the URL here
         { url, question },
         {
           headers: {

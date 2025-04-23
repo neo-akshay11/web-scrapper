@@ -14,7 +14,7 @@ const AdminLoginPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("https://your-backend-url.onrender.com/api/auth/admin-login", {
+      const response = await axios.post("https://web-scrapper-imjj.onrender.com/api/auth/admin-login", {
         email,
         password,
       });

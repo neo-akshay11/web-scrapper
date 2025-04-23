@@ -19,7 +19,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://your-backend-url.onrender.com/api/auth/register",
+        "https://web-scrapper-imjj.onrender.com/api/auth/register",
         formData
       );
       alert("User registered successfully!");
