@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import "/Users/akshay/Desktop/internship project copy/frontend/src/styles.css"
+import "../styles.css";
 const AdminDashboard = () => {
   const [users, setUsers] = useState([]);
   const [stats, setStats] = useState(null);

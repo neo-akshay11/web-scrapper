@@ -1,6 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import "/Users/akshay/Desktop/internship project copy/frontend/src/styles.css"
+import "../styles.css";
 const AdminRoute = ({ children }) => {
   const token = localStorage.getItem("adminToken");
 

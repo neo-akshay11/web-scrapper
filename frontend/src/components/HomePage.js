@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "/Users/akshay/Desktop/internship project copy/frontend/src/styles.css"
+import "../styles.css";
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8 text-center font-sans">
