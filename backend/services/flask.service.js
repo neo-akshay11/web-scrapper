@@ -2,7 +2,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-const FLASK_API_URL = process.env.FLASK_API_URL || 'https://web-scrapper-3e3m.onrender.com/process';
+const FLASK_API_URL = process.env.FLASK_API_URL || 'https://web-scrapper-tsv5.onrender.com/process';
 const TIMEOUT = process.env.FLASK_TIMEOUT || 20000; // 10 seconds
 
 exports.processQuestion = async (url, question) => {
