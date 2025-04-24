@@ -7,9 +7,11 @@ const AdminDashboard = () => {
   const [stats, setStats] = useState(null);
   const token = localStorage.getItem("adminToken");
 
+  const URI = import.meta.VITE_BACKEND_URI ;
+
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("https://web-scrapper-imjj.onrender.com/api/admin/users", {
+      const response = await axios.get(`${URI}/api/admin/users`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(response.data);

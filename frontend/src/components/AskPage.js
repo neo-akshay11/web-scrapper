@@ -11,6 +11,8 @@ const AskPage = () => {
 
     const token = localStorage.getItem("userToken");
 
+    const URI = import.meta.VITE_BACKEND_URI ;
+
     if (!token) {
       alert("Please log in to ask a question!");
       return;
@@ -18,7 +20,7 @@ const AskPage = () => {
 
     try {
       const res = await axios.post(
-        "https://web-scrapper-imjj.onrender.com/api/ask",  // Directly using the URL here
+        `${URI}/api/ask`,
         { url, question },
         {
           headers: {

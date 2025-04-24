@@ -12,9 +12,10 @@ const AdminLoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
+    const URI = import.meta.VITE_BACKEND_URI ;
 
     try {
-      const response = await axios.post("https://web-scrapper-imjj.onrender.com/api/auth/admin-login", {
+      const response = await axios.post(`${URI}/api/auth/admin-login`, {
         email,
         password,
       });

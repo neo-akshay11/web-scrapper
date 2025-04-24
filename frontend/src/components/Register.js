@@ -5,6 +5,8 @@ import "../styles.css";
 const Register = () => {
   const navigate = useNavigate();
 
+  const URI = import.meta.VITE_BACKEND_URI ;
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -19,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://web-scrapper-imjj.onrender.com/api/auth/register",
+        `${URI}/api/auth/register`,
         formData
       );
       alert("User registered successfully!");

@@ -3,12 +3,13 @@ import axios from "axios";
 import "../styles.css";
 const UserProfile = () => {
   const [profile, setProfile] = useState(null);
+  const URI = import.meta.VITE_BACKEND_URI ;
 
   useEffect(() => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("userToken");
       try {
-        const response = await axios.get("https://web-scrapper-imjj.onrender.com/api/auth/me", {
+        const response = await axios.get(`${URI}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProfile(response.data);

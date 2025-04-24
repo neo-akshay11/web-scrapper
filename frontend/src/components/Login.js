@@ -6,6 +6,8 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
+  const URI = import.meta.VITE_BACKEND_URI ;
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -13,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://web-scrapper-imjj.onrender.com/api/auth/login",
+        `${URI}/api/auth/login`,
         formData
       );
       localStorage.setItem("userToken", response.data.token);
