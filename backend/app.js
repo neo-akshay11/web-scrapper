@@ -10,10 +10,7 @@ require('./services/queue.service'); // Initialize queue
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://web-scrapper-x17a.vercel.app', // Your frontend URL
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 connectDB();
