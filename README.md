@@ -7,7 +7,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/neo-akshay11/web-scrapper.git
+git clone -b new-final https://github.com/neo-akshay11/web-scrapper.git
 cd web-scrapper
 cd python-backend
 python3 -m venv venv
